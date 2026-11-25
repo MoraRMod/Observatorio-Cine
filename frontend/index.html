@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma académica de Business Intelligence y Data Warehouse para una cadena cinematográfica.">
+  <title>Cine BI · Plataforma de inteligencia de negocios</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='4' y='15' width='32' height='21' rx='4' fill='%231f6bff' stroke='%230b1f4b' stroke-width='3'/%3E%3Cpath d='M5 9.5 33 4l1.4 7L6.4 16.5Z' fill='%23fffaf0' stroke='%230b1f4b' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <script type="module" src="/static/js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#view">Saltar al contenido</a>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/bi#/resumen">
+        <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="4" y="15" width="32" height="21" rx="4" fill="#1f6bff" stroke="currentColor" stroke-width="3"/>
+          <path d="M5 9.5 33 4l1.4 7L6.4 16.5Z" fill="#fffaf0" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          <path d="m12 8 4 6.5M20.5 6.3l4 6.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <rect x="11" y="27" width="4" height="5" rx="1" fill="#fffaf0"/><rect x="18" y="23" width="4" height="9" rx="1" fill="#fffaf0"/><rect x="25" y="20" width="4" height="12" rx="1" fill="#ffd23f"/>
+        </svg>
+        <span>CINE <b>BI</b><small>Inteligencia de negocios</small></span>
+      </a>
+      <a class="home-link" href="/">← Volver al inicio del Observatorio</a>
+      <nav aria-label="Secciones" id="nav">
+        <p class="nav-group">Análisis</p>
+        <a href="#/resumen" data-view="resumen"><span>01</span>Resumen ejecutivo</a>
+        <a href="#/ventas" data-view="ventas"><span>02</span>Ventas y rendimiento</a>
+        <a href="#/taquilla" data-view="taquilla"><span>03</span>Análisis de taquilla</a>
+        <a href="#/dulceria" data-view="dulceria"><span>04</span>Análisis de dulcería</a>
+        <a href="#/complejos" data-view="complejos"><span>05</span>Complejos y películas</a>
+        <a href="#/olap" data-view="olap"><span>06</span>Análisis OLAP</a>
+        <p class="nav-group">Predicción y decisiones</p>
+        <a href="#/modelo" data-view="modelo"><span>07</span>Modelo predictivo</a>
+        <a href="#/inteligencia" data-view="inteligencia"><span>08</span>Inteligencia de negocios</a>
+        <p class="nav-group">Arquitectura de datos</p>
+        <a href="#/dw" data-view="dw"><span>09</span>Data Warehouse</a>
+        <a href="#/etl" data-view="etl"><span>10</span>Procesos ETL</a>
+      </nav>
+      <p class="sidebar-note">Proyecto académico · Almacenes de Datos. Identidad visual inspirada en el sector; no es un producto oficial de Cinépolis.</p>
+    </aside>
+    <div class="main">
+      <div class="data-banner" role="note">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 4.5v4.2M8 11h.01"/></svg>
+        <span id="data-label">Datos sintéticos para fines académicos. No representan información financiera oficial de Cinépolis.</span>
+      </div>
+      <header class="topbar">
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="title-block"><p class="eyebrow" id="view-eyebrow"></p><h1 id="view-title">Cargando…</h1></div>
+        <form class="filters" id="filters" aria-label="Filtros globales">
+          <label>Año<select name="anio"><option value="">Todos</option></select></label>
+          <label>Trimestre<select name="trimestre"><option value="">—</option><option value="1">T1</option><option value="2">T2</option><option value="3">T3</option><option value="4">T4</option></select></label>
+          <label>Mes<select name="mes"><option value="">—</option></select></label>
+          <label>Ciudad<select name="ciudad"><option value="">Todas</option></select></label>
+          <label>Complejo<select name="complejo"><option value="">Todos</option></select></label>
+          <label>Comparar con<select name="comparar"><option value="anterior">Periodo anterior</option><option value="anio">Mismo periodo año anterior</option></select></label>
+        </form>
+      </header>
+      <main id="view" tabindex="-1"></main>
+      <footer class="footer"><span id="footer-info"></span><a href="/docs" target="_blank" rel="noopener">API (OpenAPI)</a></footer>
+    </div>
+  </div>
+</body>
+</html>

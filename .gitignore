@@ -1,0 +1,10 @@
+data/piloto_sintetico.sqlite
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
+data/sources/
+data/models/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8ec">
+    <meta name="description"
+        content="Proyecto académico de inteligencia de negocios sobre Cinépolis y la industria cinematográfica mexicana.">
+    <title>Observatorio Cine · Datos y BI</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='4' y='15' width='32' height='21' rx='4' fill='%231f6bff' stroke='%230b1f4b' stroke-width='3'/%3E%3Cpath d='M5 9.5 33 4l1.4 7L6.4 16.5Z' fill='%23fffaf0' stroke='%230b1f4b' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+    <header class="header">
+        <a class="brand" href="#inicio">
+            <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                <rect x="4" y="15" width="32" height="21" rx="4" fill="#1f6bff" stroke="currentColor" stroke-width="3"/>
+                <path d="M5 9.5 33 4l1.4 7L6.4 16.5Z" fill="#fffaf0" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                <path d="m12 8 4 6.5M20.5 6.3l4 6.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <rect x="11" y="27" width="4" height="5" rx="1" fill="#fffaf0"/><rect x="18" y="23" width="4" height="9" rx="1" fill="#fffaf0"/><rect x="25" y="20" width="4" height="12" rx="1" fill="#ffd23f"/>
+            </svg>
+            <span>OBSERVATORIO <b>CINE</b></span>
+        </a>
+        <nav aria-label="Principal"><a href="#panorama">Panorama</a><a href="#infraestructura">Infraestructura</a><a
+                href="#mercado">Mercado</a><a href="#operacion">Operación modelada</a><a class="nav-bi" href="#analisis-bi">Análisis BI</a></nav>
+        <a class="header-cta" href="/bi">Abrir plataforma BI <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow pill">BUSINESS INTELLIGENCE / MÉXICO</p>
+                <h1>Los datos detrás<br>de la <em>gran pantalla.</em></h1>
+                <p class="hero-lead">Explora la presencia de Cinépolis en México y el comportamiento de la industria
+                    cinematográfica a partir de fuentes verificables.</p>
+                <div class="hero-actions"><a class="button" href="#analisis-bi">Ir al análisis BI ↓</a><a
+                        class="quiet-link" href="#infraestructura">Explorar datos ↓</a></div>
+            </div>
+            <div class="hero-graphic" aria-hidden="true">
+                <svg class="hero-art" viewBox="0 0 520 440" focusable="false">
+                    <defs>
+                        <clipPath id="bucket-clip"><path d="M344 262h112l-18 126h-76Z"/></clipPath>
+                    </defs>
+                    <!-- Pantalla con marquesina -->
+                    <rect class="art-shadow" x="70" y="50" width="400" height="262" rx="28"/>
+                    <rect class="art-frame" x="60" y="40" width="400" height="262" rx="28"/>
+                    <g class="art-bulbs">
+                        <circle cx="100" cy="54" r="5"/><circle cx="140" cy="54" r="5"/><circle cx="180" cy="54" r="5"/>
+                        <circle cx="220" cy="54" r="5"/><circle cx="260" cy="54" r="5"/><circle cx="300" cy="54" r="5"/>
+                        <circle cx="340" cy="54" r="5"/><circle cx="380" cy="54" r="5"/><circle cx="420" cy="54" r="5"/>
+                    </g>
+                    <rect class="art-screen" x="84" y="70" width="352" height="208" rx="14"/>
+                    <path class="art-grid" d="M104 120h312M104 170h312M104 220h312"/>
+                    <g class="art-bars">
+                        <rect x="118" y="188" width="38" height="66" rx="7"/>
+                        <rect x="174" y="150" width="38" height="104" rx="7"/>
+                        <rect x="230" y="172" width="38" height="82" rx="7"/>
+                        <rect x="286" y="112" width="38" height="142" rx="7"/>
+                    </g>
+                    <path class="art-trend" d="M137 168 193 130l56 18 56-60"/>
+                    <circle class="art-dot" cx="305" cy="88" r="7"/>
+                    <!-- Tira de película -->
+                    <path class="art-film" d="M8 392c80-58 190-56 300 6"/>
+                    <path class="art-film-frames" d="M8 392c80-58 190-56 300 6"/>
+                    <!-- Palomitas -->
+                    <g class="art-pop">
+                        <circle cx="352" cy="246" r="18"/><circle cx="378" cy="230" r="20"/><circle cx="410" cy="226" r="22"/>
+                        <circle cx="440" cy="236" r="19"/><circle cx="458" cy="252" r="14"/><circle cx="396" cy="250" r="16"/>
+                    </g>
+                    <path class="art-arm" d="M350 312c-26-4-40-20-46-44"/>
+                    <circle class="art-hand" cx="302" cy="262" r="10"/>
+                    <path class="art-leg" d="M382 386l-12 30M418 386l8 30"/>
+                    <ellipse class="art-shoe" cx="362" cy="420" rx="16" ry="8"/>
+                    <ellipse class="art-shoe" cx="434" cy="420" rx="16" ry="8"/>
+                    <path class="art-bucket" d="M344 262h112l-18 126h-76Z"/>
+                    <g clip-path="url(#bucket-clip)" class="art-stripes">
+                        <rect x="356" y="262" width="18" height="130"/><rect x="391" y="262" width="18" height="130"/><rect x="426" y="262" width="18" height="130"/>
+                    </g>
+                    <path class="art-bucket-line" d="M344 262h112l-18 126h-76Z"/>
+                    <rect class="art-rim" x="334" y="252" width="132" height="20" rx="8"/>
+                    <!-- Ojos -->
+                    <g class="art-eyes">
+                        <ellipse cx="383" cy="310" rx="15" ry="17"/><ellipse cx="419" cy="310" rx="15" ry="17"/>
+                    </g>
+                    <g class="art-pupils"><circle cx="377" cy="305" r="7"/><circle cx="413" cy="305" r="7"/></g>
+                    <path class="art-lid" d="M368 304c4-14 26-14 30 0M404 304c4-14 26-14 30 0"/>
+                    <path class="art-smile" d="M388 344q13 12 26 0"/>
+                    <!-- Chispas -->
+                    <g class="art-sparkle">
+                        <path transform="translate(36 112)" d="M0-18Q0 0 18 0Q0 0 0 18Q0 0-18 0Q0 0 0-18Z"/>
+                        <path transform="translate(490 128)" d="M0-14Q0 0 14 0Q0 0 0 14Q0 0-14 0Q0 0 0-14Z"/>
+                        <path transform="translate(492 352)" d="M0-11Q0 0 11 0Q0 0 0 11Q0 0-11 0Q0 0 0-11Z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="scroll-cue">DESLIZA PARA EXPLORAR <span aria-hidden="true">↓</span></div>
+        </section>
+        <section class="section" id="panorama">
+            <div class="section-head">
+                <div>
+                    <p class="kicker">01 / PANORAMA</p>
+                    <h2>Tres perspectivas de datos.</h2>
+                </div>
+                <p>El directorio muestra infraestructura atribuida a Cinépolis; CANACINE describe el mercado nacional;
+                    y el Data Warehouse sintético permite ensayar indicadores operativos y análisis de BI. Cada vista conserva su alcance.</p>
+            </div>
+            <div class="overview">
+                <article class="overview-card" data-kind="empresa">
+                    <div class="card-top">
+                        <span class="card-letter" aria-hidden="true">A</span>
+                        <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <path d="M8 40V18l16-9 16 9v22Z"/><path d="M16 40V28h16v12"/><path d="M4 40h40"/>
+                        </svg>
+                    </div>
+                    <span class="card-tag">EMPRESA</span>
+                    <h3>Infraestructura Cinépolis</h3>
+                    <p>Complejos y pantallas identificados en el directorio público del Sistema de Información Cultural.</p>
+                    <a href="#infraestructura">Explorar infraestructura <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="overview-card" data-kind="industria">
+                    <div class="card-top">
+                        <span class="card-letter" aria-hidden="true">B</span>
+                        <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <path d="M6 40h36"/><path d="M8 32l10-10 8 6 14-16"/><path d="M32 12h8v8"/>
+                        </svg>
+                    </div>
+                    <span class="card-tag">INDUSTRIA</span>
+                    <h3>Mercado mexicano</h3>
+                    <p>Asistencia y taquilla nacionales reportadas por CANACINE para contextualizar la actividad
+                        cinematográfica.</p>
+                    <a href="#mercado">Ver cifras de mercado <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="overview-card" data-kind="sintetico">
+                    <div class="card-top">
+                        <span class="card-letter" aria-hidden="true">C</span>
+                        <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <rect x="8" y="8" width="32" height="32" rx="7"/><circle cx="17" cy="17" r="2.5"/><circle cx="24" cy="24" r="2.5"/><circle cx="31" cy="31" r="2.5"/>
+                        </svg>
+                    </div>
+                    <span class="card-tag">MODELO SINTÉTICO</span>
+                    <h3>Operación de ejemplo</h3>
+                    <p>Funciones, taquilla y dulcería 2023-2025 inventadas con reglas reproducibles y cargadas en un Data Warehouse.</p>
+                    <a href="#analisis-bi">Ver análisis BI <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+        </section>
+        <section class="section data-section" id="infraestructura">
+            <div class="section-head">
+                <div>
+                    <p class="kicker">02 / INFRAESTRUCTURA</p>
+                    <h2>Cinépolis en el territorio.</h2>
+                </div>
+                <p>Explora la distribución de complejos y pantallas registrados. Los resultados aplican el criterio
+                    descrito en la metodología.</p>
+            </div>
+            <p class="source-badge" data-source="sic">DATOS OBSERVADOS · DIRECTORIO SIC</p>
+            <div class="metrics" aria-live="polite">
+                <article class="metric"><span>COMPLEJOS IDENTIFICADOS</span><strong id="complex-count">—</strong><small
+                        id="metric-area">Directorio SIC · México</small></article>
+                <article class="metric"><span>PANTALLAS REGISTRADAS</span><strong id="screen-count">—</strong><small>Sumatoria de los
+                        registros seleccionados</small></article>
+                <article class="metric"><span>COBERTURA NACIONAL</span><strong id="state-count">—</strong><small>Entidades federativas
+                        con registros</small></article>
+            </div>
+            <div class="explorer">
+                <article class="panel">
+                    <div class="panel-head">
+                        <div><span>DISTRIBUCIÓN GEOGRÁFICA</span>
+                            <h3>Complejos por entidad</h3>
+                        </div><small>TOP 8 · NACIONAL</small>
+                    </div>
+                    <div id="bar-chart" class="bar-chart" role="img" aria-label="Complejos por entidad">
+                        <p class="chart-status">Cargando datos…</p>
+                    </div>
+                    <p class="panel-note">Ranking de las 8 entidades con más complejos en todo el directorio; no cambia con los filtros.</p>
+                </article>
+                <article class="panel">
+                    <div class="panel-head">
+                        <div><span>DIRECTORIO INTERACTIVO</span>
+                            <h3>Explorar complejos</h3>
+                        </div><small id="result-count" role="status"></small>
+                    </div>
+                    <div class="filters">
+                        <div class="field"><label for="state-filter">Entidad</label><select id="state-filter">
+                                <option value="">Todas las entidades</option>
+                            </select></div>
+                        <div class="field field-grow"><label for="search-filter">Buscar</label><input id="search-filter"
+                                type="search" placeholder="Complejo o ciudad…" autocomplete="off"></div>
+                    </div>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla de complejos, desplazable">
+                        <table>
+                            <caption class="sr-only">Complejos Cinépolis del directorio SIC según los filtros seleccionados</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Complejo</th>
+                                    <th scope="col">Entidad</th>
+                                    <th scope="col">Pantallas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="complex-table">
+                                <tr>
+                                    <td colspan="3">Cargando directorio…</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section market-section" id="mercado">
+            <div class="section-head">
+                <div>
+                    <p class="kicker">03 / MERCADO</p>
+                    <h2>El contexto nacional.</h2>
+                </div>
+                <p>Indicadores de toda la industria cinematográfica mexicana en 2025. No representan ventas ni
+                    asistencia propias de Cinépolis.</p>
+            </div>
+            <p class="source-badge" data-source="nacional">CIFRAS NACIONALES · CANACINE · 2025</p>
+            <div class="market-grid">
+                <article class="market-feature"><span>BOLETOS · NACIONAL 2025</span>
+                    <div><strong>203 <small>millones</small></strong>
+                        <h3>boletos vendidos en México</h3>
+                        <p><b class="trend" aria-hidden="true">↘</b> 6.86 % menos que en 2024.</p>
+                    </div>
+                </article>
+                <article class="market-stat"><span>TAQUILLA NACIONAL</span><strong>$14,983 <small>MDP</small></strong>
+                    <p>Ingresos de exhibición en México durante 2025.</p>
+                </article>
+                <article class="market-stat"><span>ASISTENCIA ANUAL · NACIONAL</span><strong>1.5 <small>veces</small></strong>
+                    <p>Promedio por habitante durante 2025.</p>
+                </article>
+            </div>
+            <div class="source-strip"><span>FUENTE</span>
+                <p>CANACINE, <em>Resultados de la industria cinematográfica 2025: serie histórica 2016–2025</em>. Cifras
+                    nacionales con datos de Comscore Movies.</p><a
+                    href="./Archivos/RESULTADOS-DE-LA-INDUSTRIA-CINEMATOGRAFICA.SERIE-2016-2025.pptx-1.pdf"
+                    target="_blank" rel="noopener">Abrir reporte <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+            </div>
+        </section>
+        <section class="section synthetic-section" id="operacion">
+            <div class="section-head">
+                <div><p class="kicker">04 / DATOS SINTÉTICOS</p><h2>La operación modelada.</h2></div>
+                <p>Indicadores leídos en vivo del Data Warehouse: 14 complejos ficticios en 8 ciudades reales, de enero de 2023 a diciembre de 2025. Funciones, boletos y dulcería son inventados para demostrar BI; no describen la operación real de Cinépolis.</p>
+            </div>
+            <p class="source-badge" data-source="sintetico" id="dw-badge">MODELO SINTÉTICO · DATA WAREHOUSE</p>
+            <div class="synthetic-metrics">
+                <article class="metric is-synthetic"><span>INGRESOS TOTALES</span><strong id="synthetic-revenue">—</strong><small id="synthetic-revenue-note">Taquilla + dulcería</small></article>
+                <article class="metric is-synthetic"><span>BOLETOS VENDIDOS</span><strong id="synthetic-tickets">—</strong><small id="synthetic-functions-note">Funciones registradas</small></article>
+                <article class="metric is-synthetic"><span>OCUPACIÓN PROMEDIO</span><strong id="synthetic-occupancy">—</strong><small>Boletos / butacas ofertadas</small></article>
+            </div>
+            <div class="panel synthetic-panel is-synthetic">
+                <div class="panel-head"><div><span>TENDENCIA MENSUAL · DATOS SINTÉTICOS</span><h3 id="synthetic-chart-title">Boletos por mes</h3></div>
+                    <div class="field field-inline"><label for="synthetic-view">Indicador</label>
+                        <select id="synthetic-view"><option value="boletos">Boletos</option><option value="taquilla">Taquilla</option><option value="dulceria">Dulcería</option><option value="ocupacion">Ocupación</option></select></div>
+                </div>
+                <div id="synthetic-chart" class="synthetic-chart" role="img" aria-label="Gráfico mensual de datos sintéticos">
+                    <p class="chart-status">Cargando datos del Data Warehouse…</p>
+                </div>
+                <p class="synthetic-footnote">Fuente: <code>mart_diario_complejo</code> del Data Warehouse, generado con semilla fija y cargado por el proceso ETL. <a href="/bi#/dw">Ver arquitectura y diccionario de datos <span aria-hidden="true">↗</span></a></p>
+            </div>
+        </section>
+        <section class="section bi-section" id="analisis-bi">
+            <div class="section-head">
+                <div><p class="kicker">05 / ANÁLISIS BI</p><h2>Diez análisis para decidir.</h2></div>
+                <p>La plataforma de Business Intelligence organiza los datos del almacén en diez vistas. Elige un análisis para abrirlo; los indicadores de cada tarjeta corresponden al último año completo.</p>
+            </div>
+            <div class="bi-kpis" id="bi-kpis" aria-live="polite"></div>
+            <ol class="bi-list" id="bi-list"></ol>
+            <div class="bi-cta"><a class="button" href="/bi">Abrir la plataforma completa ↗</a><span id="bi-status" class="bi-status"></span></div>
+        </section>
+<section class="section" id="simulacion">
+            <div class="simulation">
+                <div>
+                    <p class="kicker">06 / EN PREPARACIÓN</p>
+                    <h2>Explorar lo que podría pasar.</h2>
+                    <p>Se está diseñando un módulo para probar escenarios de concurrencia, ocupación de salas y
+                        dulcería. Sus parámetros y resultados se distinguirán de los datos observados.</p>
+                </div>
+                <div class="simulation-art" aria-hidden="true">
+                    <svg viewBox="0 0 300 220" focusable="false">
+                        <rect class="sim-card" x="30" y="24" width="240" height="172" rx="20"/>
+                        <path class="sim-axis" d="M58 160h184"/>
+                        <path class="sim-range" d="M78 128c34-40 70-60 104-44s38 4 52-26"/>
+                        <path class="sim-line" d="M78 140c34-30 70-44 104-30s38-6 52-32"/>
+                        <path class="sim-range" d="M78 150c34-22 70-30 104-16s38-16 52-38"/>
+                        <path class="sim-slider" d="M58 56h120"/>
+                        <circle class="sim-knob" cx="130" cy="56" r="11"/>
+                        <path class="sim-spark" transform="translate(250 42)" d="M0-14Q0 0 14 0Q0 0 0 14Q0 0-14 0Q0 0 0-14Z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="section methodology" id="metodologia">
+            <div class="section-head">
+                <div>
+                    <p class="kicker">07 / METODOLOGÍA</p>
+                    <h2>De dónde salen las cifras.</h2>
+                </div>
+                <p>La trazabilidad es parte del proyecto: cada vista indica si presenta datos de Cinépolis, del sector o
+                    una simulación.</p>
+            </div>
+            <div class="method-grid">
+                <article data-source="sic"><span>01 · OBSERVADO</span>
+                    <h3>Directorio SIC</h3>
+                    <p>Se seleccionan filas cuyo nombre contiene “Cinépolis” (con o sin acento) y cuya adscripción es
+                        “Cinépolis de México, S.A. de C.V.”. La suma de pantallas corresponde a esas filas. Es una
+                        fotografía del directorio, no una serie histórica.</p>
+                </article>
+                <article data-source="nacional"><span>02 · NACIONAL</span>
+                    <h3>Reporte CANACINE</h3>
+                    <p>Las cifras de 2025 describen la industria mexicana completa. No se distribuyen entre complejos ni
+                        se atribuyen a una cadena.</p>
+                </article>
+                <article data-source="sintetico"><span>03 · SINTÉTICO</span>
+                    <h3>Operación sintética</h3>
+                    <p>Complejos con nombres ficticios en ciudades reales, películas ficticias y ventas generadas por reglas
+                        con semilla fija. Un proceso ETL las limpia y carga en un Data Warehouse en estrella. <a href="/bi#/etl">Ver proceso ETL ↗</a></p>
+                </article>
+            </div>
+            <p class="academic-note">Sitio académico independiente. Cinépolis es una marca registrada de sus titulares.
+                Datos utilizados con fines educativos y atribuidos a sus fuentes originales.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <span>OBSERVATORIO CINE · PROYECTO FINAL DE ALMACENES DE DATOS</span>
+        <a href="#inicio">VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+    </footer>
+</body>
+
+</html>
